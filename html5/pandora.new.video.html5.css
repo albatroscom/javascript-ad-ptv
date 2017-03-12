@@ -1,0 +1,71 @@
+@charset "utf-8";
+*{margin:0;padding:0}
+html,body,div,span,img,applet,embed,canvas,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,samp,small,strike,strong,sub,sup,tt,var,b,u,i,s,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,button,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;background:transparent;font-size:12px;outline:0;font-family:Arial,Helvetica,sans-serif;}
+body,input,button,textarea,select,table{font-size:12px;line-height:18px;color:#000;}
+ol,ul,li{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+textarea{overflow:auto}
+a{text-decoration:none}
+img{border:none}
+h1,h2,h3,h4,h5,h6{font-weight:bold;}
+legend{display: inline-block;overflow: hidden;position: absolute;width:0px;height:0px;font-size:0px;line-height: 1px;text-indent: 4px;white-space: nowrap;}
+/*button{float:left;border-radius:4px;margin-right:4px;padding:6px 12px 5px;color:#fff;border:1px solid;}*/
+
+.player{position:relative;}
+.player .screen{position:relative;}
+.player .screen video{display:block;margin:0 auto;}
+.player .screen button{width:81px;height:81px;position:absolute;left:50%;top:50%;margin:-40px 0 0 -40px;cursor:pointer;_cursor:pointer;}
+.player .screen .big_play{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/big_play.png) no-repeat;}
+.player .screen .big_stop{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/big_stop.png) no-repeat;}
+.player .screen .skip{width:248px;height:30px;padding-top:90px;text-align:center;background:#000 url(http://imgcdn.pandora.tv/_ptv_all/html5/images/skip_bg.png) no-repeat center 19px;opacity:0.8;filter:alpha(opacity=80);-ms-filter:alpha(opacity=80);font-size:14px;color:#fff;font-weight:bold;position:absolute;left:50%;top:50%;margin:-60px 0 0 -124px;border-radius:8px;}
+.player .btn_area{height:28px;background:#eee;border:1px solid #bcbcbc;position:relative;}
+.player .btn_area>button{position:absolute;top:0;cursor:pointer;_cursor:pointer;}
+.player .btn_area>button>span{display:block;cursor:pointer;_cursor:pointer;}
+.summary1, .summary2, .summary3, .summary4, .summary5{background:#000;opacity:0.8;filter:alpha(opacity=80);-ms-filter:alpha(opacity=80);color:#fff;padding:3px 8px;border-radius:5px;position:absolute;bottom:35px;z-index:999;}
+.player .summary1{left:0;}
+.player .summary2{left:30px;}
+.player .summary3{right:78px;}
+.player .summary4{right:40px;}
+.player .summary5{right:0;}
+.player .btn_area .play{margin:0; left:0;width:46px;height:28px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/play.png) no-repeat;border-right:1px solid #bcbcbc;}
+.player .btn_area .play:hover{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/play_over.png) no-repeat;}
+.player .btn_area .stop{left:0;width:46px;height:28px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/stop.png) no-repeat;border-right:1px solid #bcbcbc;}
+.player .btn_area .stop:hover{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/stop_over.png) no-repeat;}
+.player .btn_area .repeat{left:47px;width:32px;height:28px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/repeat.png) no-repeat center center;border-right:none;}
+.player .btn_area .repeat:hover, .player .btn_area .repeat.on{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/repeat_over.png) no-repeat center center;}
+.player .btn_area .one{left:47px;width:32px;height:28px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/one.png) no-repeat center center;border-right:none;}
+.player .btn_area .one:hover{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/one_over.png) no-repeat center center;}
+.player .btn_area .time{position:absolute;top:0;left:79px;color:#303030;padding:2px 0 1px 9px;border-left:1px solid #bcbcbc;margin-top:4px;}
+.player .btn_area .time span{color:#888;}
+.player .btn_area .sound{position:relative;float:right;height:28px;padding:0 9px;text-align:left;color:#3d3f48;border-right:1px solid #bcbcbc;}
+.player .btn_area .sound.wid{width:136px;}
+.player .btn_area .sound>span{display:inline-block;vertical-align:top;margin:6px 0 0;}
+.player .btn_area .sound .on{width:18px;height:28px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/sound_on.png) no-repeat left center;}
+.player .btn_area .sound .on:hover{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/sound_on_over.png) no-repeat left center;}
+.player .btn_area .sound .off{width:18px;height:28px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/sound_off.png) no-repeat left center;text-align:left;color:#3d3f48;}
+.player .btn_area .sound .off:hover{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/sound_off_over.png) no-repeat left center;}
+.player .btn_area .sound .sound_bg{display:none;width:79px;height:13px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/sound_bg.png) no-repeat;position:absolute;right:9px;top:8px;}
+.player .btn_area .sound.wid .sound_bg{display:block;}
+.player .btn_area .sound .sound_bg .sound_bar{width:50%;height:13px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/sound_bar.png) no-repeat;}
+.player .btn_area .sound .sound_bg .cursor_box{width:83%;position:absolute;left:-3px;top:0;}
+.player .btn_area .sound .sound_bg .cursor_box .sound_cursor{cursor:pointer;_cursor:pointer;width:23px;height:23px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/sound_cursor.png) no-repeat;position:absolute;left:30%;top:-5px;}
+.player .btn_area .pixel{border-right:1px solid #bcbcbc;position:relative;float:right;/*width:42px;*/height:22px;padding:6px 7px 0;color:#3d3f48;text-align:center;}
+.player .btn_area .pixel button{cursor:pointer;_cursor:pointer;padding-left:8px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/pixel_dott.png) no-repeat 2px center;}
+.player .btn_area .pixel button.none{padding-left:0;background:none;}
+.player .btn_area .pixel .on{color:#e92626;}
+.player .btn_area .share{position:relative;float:right;width:39px;height:28px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/share.png) no-repeat center center;}
+.player .btn_area .share:hover{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/share_over.png) no-repeat center center;}
+.player .btn_area .full{position:relative;float:right;width:39px;height:28px;border-left:1px solid #bcbcbc;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/full.png) no-repeat center center;}
+.player .btn_area .full:hover{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/full_over.png) no-repeat center center;}
+.player .btn_area .small{position:relative;float:right;width:39px;height:28px;border-right:none;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/small.png) no-repeat center center;}
+.player .btn_area .small:hover{background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/small_hover.png) no-repeat center center;}
+.player .bar{width:100%;height:12px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/bar.png) repeat-x;position:relative;z-index:1;}
+.player .bar .loading{cursor:pointer;_cursor:pointer;width:0%;height:12px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/loading_bar.png) repeat-x;}
+.player .bar .play_bar{width:0%;height:12px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/play_bar.png) repeat-x;position:absolute;left:0;top:0;}
+.player .bar .play_box{width:96%;position:absolute;left:0px;top:0;}
+.player .bar .play_box .play_cursor{cursor:pointer;_cursor:pointer;width:26px;height:26px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/play_cursor.png) no-repeat;position:absolute;left:0%;top:-7px;z-index:999;}
+.player .bar strong{display:block;width:44px;height:27px;background:url(http://imgcdn.pandora.tv/_ptv_all/html5/images/bubble.png) no-repeat;position:absolute;top:-29px;text-align:center;font-family:Tahoma;font-size:10px;color:#6d6f76;}
+.player .bar .loading_bubble{left:70%;}
+.player .bar .play_bubble{left:93%;}
+.html5_player{width:100%;position:absolute;left:0;top:0;text-align:center;z-index:9999;}
+.html5_player img{position:static !important;}
